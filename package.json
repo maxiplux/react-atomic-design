@@ -20,7 +20,7 @@
         "prepush": "npm run eslint && npm run stylelint && npm run flow"
     },
     "dependencies": {
-        "@storybook/addon-info": "^3.2.13",
+        "@storybook/addon-info": "^3.4.12",
         "babel-plugin-flow-react-proptypes": "^7.0.1",
         "classnames": "^2.2.5",
         "express": "^4.16.0",
