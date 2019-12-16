@@ -17,16 +17,20 @@
     react-inspector "^2.2.0"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.13.tgz#9b2ec64f497cd19f85447aeeedb12b7c2fa307c6"
+"@storybook/addon-info@^3.4.12":
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.4.12.tgz#3e867ed347997823a5389369aa018231e9416b8e"
+  integrity sha512-Rr+VLcof5BMw6qYpUkowlSJ7PRfEBIU38aeMIJY1ZJvXoqSNZMGIhvpbmetQ0VvhmrOuMNLckzITc8i5PaLtBQ==
   dependencies:
-    "@storybook/addons" "^3.2.13"
-    "@storybook/components" "^3.2.13"
+    "@storybook/client-logger" "3.4.12"
+    "@storybook/components" "3.4.12"
     babel-runtime "^6.26.0"
+    glamor "^2.20.40"
+    glamorous "^4.12.1"
     global "^4.3.2"
-    marksy "^2.0.0"
-    prop-types "^15.6.0"
+    marksy "^6.0.3"
+    nested-object-assign "^1.0.1"
+    prop-types "^15.6.1"
     react-addons-create-fragment "^15.5.3"
     util-deprecate "^1.0.2"
 
@@ -40,10 +44,6 @@
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.12.tgz#61adccaa8c0016f1439dc8934d8d61042b35e741"
 
-"@storybook/addons@^3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.13.tgz#a133103770a7f2330bc931571df1b2ae660f8f71"
-
 "@storybook/channel-postmessage@^3.2.12":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.2.12.tgz#ca1cddfbda3324c8fc44a22b1c35682d80d73247"
@@ -56,17 +56,23 @@
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.12.tgz#7920d0e5f84d718ccbb3925c5782cb5312500b6d"
 
+"@storybook/client-logger@3.4.12":
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.12.tgz#060a335cb560e4f0a0b61b358bac95a7529ef3d3"
+  integrity sha512-5nr3eSOYKUnWB6tlQ0c3GTfEoeD7+gVsFEQw5zgo131gElVuRkdBqI3kGT4us7MmspKkmCcyYjAm94Dn7YNRhA==
+
+"@storybook/components@3.4.12":
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.12.tgz#07499c43aca1f8543211202f3d142764bdd4c807"
+  integrity sha512-1wgsFOlpmziP7K0ilo/O3piyGm+iVzzFc2RIVXDCMamPVTx19MJNGaBefcSezw8mO5p0XrU/nEhxOiKIJw4UUw==
+  dependencies:
+    glamor "^2.20.40"
+    glamorous "^4.12.1"
+    prop-types "^15.6.1"
+
 "@storybook/components@^3.2.12":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.12.tgz#a9ddb6dd81d936139d742deea1a67de72907bde3"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.9.7"
-    prop-types "^15.6.0"
-
-"@storybook/components@^3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.13.tgz#0576139f54468c9039da6a05d8ed2f1656f6007e"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.9.7"
@@ -1499,9 +1505,10 @@ babel-runtime@6.x.x, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
 
-babel-standalone@^6.24.0:
+babel-standalone@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-standalone/-/babel-standalone-6.26.0.tgz#15fb3d35f2c456695815ebf1ed96fe7f015b6886"
+  integrity sha1-Ffs9NfLEVmlYFevx7Zb+fwFbaIY=
 
 babel-template@7.0.0-beta.0:
   version "7.0.0-beta.0"
@@ -2330,6 +2337,11 @@ csso@~2.3.1:
   dependencies:
     clap "^1.0.9"
     source-map "^0.5.3"
+
+csstype@^2.2.0:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.8.tgz#0fb6fc2417ffd2816a418c9336da74d7f07db431"
+  integrity sha512-msVS9qTuMT5zwAGCVm4mxfrZ18BNc6Csd0oJAtiFMZ1FAx1CCvy2+5MDmYoix63LM/6NDbNtodCiGYGmFgO0dA==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -3401,6 +3413,20 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
+glamorous@^4.12.1:
+  version "4.13.1"
+  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.13.1.tgz#8909afcbc7f09133c6eb26bedcc1250c1f774312"
+  integrity sha512-x9yCGlRrPEkHF63m+WoZXHnpSet5ipS/fxczx5ic0ZKPPd2mMDyCZ0iEhse49OFlag0yxbJTc7k/L0g1GCmCYQ==
+  dependencies:
+    brcast "^3.0.0"
+    csstype "^2.2.0"
+    fast-memoize "^2.2.7"
+    html-tag-names "^1.1.1"
+    is-function "^1.0.1"
+    is-plain-object "^2.0.4"
+    react-html-attributes "^1.4.2"
+    svg-tag-names "^1.1.0"
+
 glamorous@^4.9.7:
   version "4.9.7"
   resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.9.7.tgz#78bb008d1404b5bd91ad4d043ec0dc6430ad2653"
@@ -4078,6 +4104,11 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
+"js-tokens@^3.0.0 || ^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
+  integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
+
 js-yaml@^3.4.3, js-yaml@^3.9.0, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
@@ -4401,6 +4432,13 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   dependencies:
     js-tokens "^3.0.0"
 
+loose-envify@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
+  integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  dependencies:
+    js-tokens "^3.0.0 || ^4.0.0"
+
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -4437,17 +4475,19 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-marked@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+marked@^0.3.12:
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+  integrity sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
 
-marksy@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/marksy/-/marksy-2.0.1.tgz#019eb9c13ff37120ce4dddeb7774aba152b5d7e0"
+marksy@^6.0.3:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/marksy/-/marksy-6.1.0.tgz#36482148a1115cc78570855f7ebd744bb453d5cc"
+  integrity sha512-xVAuJQxwdAljvFVqlY7CIRewn5YHGvCqeJkY1bbcTBfZV4dNDSZpHWTREb1MNu/oXYzKgg5pmTfE1DIW6M1zrA==
   dependencies:
-    babel-standalone "^6.24.0"
+    babel-standalone "^6.26.0"
     he "^1.1.1"
-    marked "^0.3.6"
+    marked "^0.3.12"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -4622,6 +4662,11 @@ natural-compare@^1.4.0:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+nested-object-assign@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/nested-object-assign/-/nested-object-assign-1.0.3.tgz#5aca69390d9affe5a612152b5f0843ae399ac597"
+  integrity sha512-kgq1CuvLyUcbcIuTiCA93cQ2IJFSlRwXcN+hLcb2qLJwC2qrePHGZZa7IipyWqaWF6tQjdax2pQnVxdq19Zzwg==
 
 node-dir@^0.1.10:
   version "0.1.17"
@@ -5517,6 +5562,15 @@ prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8,
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@^15.6.1:
+  version "15.7.2"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.8.1"
+
 proxy-addr@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.2.tgz#6571504f47bb988ec8180253f85dd7e14952bdec"
@@ -5660,6 +5714,13 @@ react-html-attributes@^1.3.0:
   dependencies:
     html-element-attributes "^1.0.0"
 
+react-html-attributes@^1.4.2:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/react-html-attributes/-/react-html-attributes-1.4.6.tgz#9558b56bb81c60f6cee9ae7d5e97434a59c086ff"
+  integrity sha512-uS3MmThNKFH2EZUQQw4k5pIcU7XIr208UE5dktrj/GOH1CMagqxDl4DCLpt3o2l9x+IB5nVYBeN3Cr4IutBXAg==
+  dependencies:
+    html-element-attributes "^1.0.0"
+
 react-icon-base@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.1.0.tgz#a196e33fdf1e7aaa1fda3aefbb68bdad9e82a79d"
@@ -5676,6 +5737,11 @@ react-inspector@^2.2.0:
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-is@^16.8.1:
+  version "16.12.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
+  integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
 react-komposer@^1.9.0:
   version "1.13.1"
