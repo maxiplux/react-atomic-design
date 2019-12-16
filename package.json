@@ -24,7 +24,7 @@
         "babel-plugin-flow-react-proptypes": "^7.0.1",
         "classnames": "^2.2.5",
         "express": "^4.16.0",
-        "express-static-gzip": "^0.3.0",
+        "express-static-gzip": "^0.3.2",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "recompose": "^0.26.0"
