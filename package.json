@@ -27,7 +27,7 @@
         "express-static-gzip": "^0.3.0",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
-        "recompose": "^0.26.0"
+        "recompose": "^0.30.0"
     },
     "devDependencies": {
         "@storybook/addon-actions": "^3.2.12",
